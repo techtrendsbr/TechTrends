@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método Transcenda - Cati Pagel | Pare de Apagar Incêndios, Comece a Acender Luzes</title>
+    <meta name="description" content="Transforme seu negócio com o Método Transcenda. Saia da sobrevivência e entre na prosperidade com estratégias que realmente funcionam.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #975b41;
+            --secondary-color: #543224;
+            --accent-color: #be8567;
+            --light-bg: #f3f1ef;
+            --text-dark: #2c2c2c;
+            --text-light: #666;
+            --gold: #eec195;
+            --success: #16a34a;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23ffffff" fill-opacity="0.05"><circle cx="30" cy="30" r="4"/></g></svg>') repeat;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            font-weight: 500;
+            color: var(--gold);
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--success), #22c55e);
+            color: white;
+            padding: 18px 40px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(34, 197, 94, 0.3);
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(34, 197, 94, 0.4);
+        }
+
+.urgency-badge {
+    background: #fee2e2;              /* vermelho claro */
+    color: #b91c1c;                   /* vermelho escuro */
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 12px;
+    letter-spacing: 0.5px;
+    box-shadow: inset 0 0 0 1px #fca5a5; /* contorno sutil */
+    animation: fadePulse 3s ease-in-out infinite;
+}
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            background: var(--light-bg);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            line-height: 1.2;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: var(--text-light);
+        }
+
+        .about-image {
+            text-align: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        }
+
+        /* Problem Section */
+        .problem {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .problem h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            text-align: center;
+            margin-bottom: 60px;
+            color: var(--secondary-color);
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .problem-card {
+            background: #fef2f2;
+            padding: 40px;
+            border-radius: 15px;
+            border-left: 5px solid #ef4444;
+            position: relative;
+        }
+
+        .problem-card::before {
+            content: "😰";
+            font-size: 2rem;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .problem-card h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .problem-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Solution Section */
+        .solution {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--light-bg) 0%, #ffffff 100%);
+        }
+
+        .solution h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+        }
+
+        .solution-subtitle {
+            text-align: center;
+            font-size: 1.3rem;
+            margin-bottom: 60px;
+            color: var(--text-light);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .benefit-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .benefit-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .benefit-card h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .benefit-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 100px 0;
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .testimonials h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .testimonial-card {
+            background: rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .testimonial-text {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            line-height: 1.6;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--gold);
+        }
+
+        .testimonial-role {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Offers Section */
+        .offers {
+            padding: 100px 0;
+            background: var(--light-bg);
+        }
+
+        .offers h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            text-align: center;
+            margin-bottom: 60px;
+            color: var(--secondary-color);
+        }
+
+        .offers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .offer-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.1);
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .offer-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .offer-card.featured {
+            border: 3px solid var(--success);
+            transform: scale(1.05);
+        }
+
+        .offer-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--success);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .offer-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .offer-subtitle {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            color: var(--text-light);
+        }
+
+        .offer-price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--success);
+            margin-bottom: 10px;
+        }
+
+        .offer-installments {
+            font-size: 1rem;
+            color: var(--text-light);
+            margin-bottom: 30px;
+        }
+
+        .offer-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .offer-features li {
+            padding: 8px 0;
+            color: var(--text-light);
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .offer-features li::before {
+            content: "✓";
+            color: var(--success);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* CTA Section */
+        .final-cta {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 30px;
+        }
+
+        .final-cta p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .scarcity-text {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--secondary-color);
+            color: white;
+            padding: 60px 0 30px;
+            text-align: center;
+        }
+
+        .footer-content {
+            margin-bottom: 30px;
+        }
+
+        .footer-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--gold);
+        }
+
+        .contact-info {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .social-links {
+            margin-top: 30px;
+        }
+
+        .social-links a {
+            color: var(--gold);
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1rem;
+        }
+
+        /* WhatsApp Widget */
+        .whatsapp-widget {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25d366;
+            color: white;
+            padding: 15px;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-widget:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .hero-description {
+                font-size: 1.1rem;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+
+            .about-text h2,
+            .problem h2,
+            .solution h2,
+            .testimonials h2,
+            .offers h2,
+            .final-cta h2 {
+                font-size: 2.2rem;
+            }
+           }
+.faq-section {
+  max-width: 760px;
+  margin: 60px auto;
+  font-family: "Inter", sans-serif;
+  padding: 0 20px;
+}
+
+.faq-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #1f2937;
+}
+
+.accordion {
+  background: #ffffff;
+  color: #1f2937;
+  cursor: pointer;
+  padding: 18px 20px;
+  width: 100%;
+  text-align: left;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 600;
+  position: relative;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.accordion:hover {
+  background-color: #f9fafb;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+}
+
+.accordion::after {
+  content: "⌄";
+  font-size: 1.2rem;
+  position: absolute;
+  right: 20px;
+  top: 18px;
+  transition: transform 0.3s ease;
+  color: #6b7280;
+}
+
+.accordion.active::after {
+  transform: rotate(180deg);
+}
+
+.panel {
+  padding: 0 20px 20px;
+  background: #fefefe;
+  border-left: 4px solid #f87171;
+  border-radius: 0 0 12px 12px;
+  display: none;
+  animation: fadeIn 0.3s ease;
+}
+
+.panel p {
+  margin: 10px 0 0;
+  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.section-carousel {
+  background-color: #7c4a2d; /* fundo marrom elegante */
+  padding: 60px 20px;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+}
+
+.section-carousel h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 32px;
+  line-height: 1.4;
+}
+
+.carousel-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.carousel-container {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  max-width: 100%;
+  scroll-behavior: smooth;
+}
+
+.carousel-container::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-card {
+  flex: 0 0 260px;
+  background-color: #fff;
+  border-radius: 16px;
+  color: #1f2937;
+  scroll-snap-align: start;
+  overflow: hidden;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.carousel-content {
+  padding: 16px;
+}
+
+.carousel-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #92400e;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.carousel-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.carousel-points {
+  font-size: 0.9rem;
+  color: #4b5563;
+  line-height: 1.4;
+}
+
+.carousel-points li {
+  margin-bottom: 6px;
+}        
+        
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                            <div class="hero-subtitle"> MÉTODO TRANSCENDA
+                            </div>
+                <h1>Você <u>não nasceu</u> para viver apagando incêndios!</h1>
+                <p class="hero-subtitle">
+                    Pare de sobreviver no seu próprio negócio e comece a prosperar com sentido.
+                    O <strong>Método Transcenda</strong> já transformou mais de 20.000 vidas. Participe agora!
+                </p></br>
+                <a href="#ofertas" class="cta-button">QUERO TRANSCENDER AGORA!</a>
+            </div></br>
+            <p class="urgency-badge">🔥 Últimas vagas disponíveis!</p>
+        </div>
+    </section>
+
+    <!-- About Cati Section -->
+    <section class="about" id="sobre">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2>Conheça Cati Pagel</h2>
+                    <p>
+                        <strong>Com mais de 9 anos de experiência</strong> em atendimento clínico, estética, gestão e operação comercial,
+                        Cati Pagel transformou sua trajetória em uma potência que hoje inspira centenas de mulheres empreendedoras.
+                    </p>
+                    <p>
+                        Cati sempre esteve em contato direto com pessoas. Entende de dores, de processos humanos, de escolhas e recomeços.
+                        E foi essa <strong>escuta sensível</strong>, aliada a um olhar obstinado para soluções, que a levou a criar um dos movimentos
+                        mais potentes de mentorias femininas com alma e estratégia.
+                    </p>
+                    <p>
+                        <strong>Ela tem uma visão 360º de negócios:</strong> já esteve na clínica, na estética, no financeiro, na operação e no comercial.
+                        Une inteligência emocional com estratégia digital e enxerga soluções onde muitos veem caos.
+                    </p>
+                    <a href="#ofertas" class="cta-button">QUERO CONHECER O MÉTODO TRANSCENDA</a>
+
+                </div>
+                <div class="about-image">
+                    <img src="https://ext.same-assets.com/398034981/3320298142.jpeg" alt="Cati Pagel - Criadora do Método Transcenda">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem" id="problemas">
+        <div class="container">
+            <h2>Você se identifica com alguma dessas situações?</h2>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <h3>Sente que sua empresa poderia vender muito mais</h3>
+                    <p>Mas algo sempre trava o crescimento e você não consegue identificar exatamente o que é.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>Está tudo certo com seu produto</h3>
+                    <p>Mas as vendas não decolam e você fica se perguntando por que os resultados não vêm.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>Você se dedica muito</h3>
+                    <p>Mas sente que falta clareza, estrutura e direção no seu negócio para chegar onde quer.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>Vive apagando incêndios</h3>
+                    <p>Em vez de construir algo sólido e sustentável que gere resultados consistentes.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>Quer vender alto valor</h3>
+                    <p>Mas não sabe como posicionar sua marca e comunicar o valor real do que oferece.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>Tem poucos seguidores</h3>
+                    <p>E acredita que isso impede de ter sucesso no mundo digital.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution" id="solucao">
+        <div class="container">
+            <h2>Método Transcenda</h2>
+            <p class="solution-subtitle">
+                A transformação que você precisa para sair da sobrevivência e entrar na prosperidade
+            </p>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Processos claros para vender mais e vender caro</h3>
+                    <p>Estruture sua operação com processos que funcionam e geram resultados consistentes.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">✨</div>
+                    <h3>Posicionamento digital com essência e propósito</h3>
+                    <p>Descubra como se posicionar de forma autêntica e atrair clientes ideais.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📈</div>
+                    <h3>Clareza estratégica que gera resultados mensuráveis</h3>
+                    <p>Tenha uma visão clara do seu negócio e métricas que realmente importam.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🚀</div>
+                    <h3>Organização interna para crescer com leveza</h3>
+                    <p>Estruture sua empresa para escalar sem você precisar trabalhar mais horas.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💎</div>
+                    <h3>Desenvolva infoprodutos com verdade</h3>
+                    <p>Crie produtos digitais autênticos que transformam vidas e geram resultados.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌟</div>
+                    <h3>Sucesso mesmo com poucos seguidores</h3>
+                    <p>Aprenda a converter e vender independente do tamanho da sua audiência.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+<section class="section-carousel">
+  <h2>✨ Os 8 Módulos do Método</h2>
+  <p class="solution-subtitle-white">
+                Veja o que você terá direito ao obter acesso:
+            </p>
+</br>
+  <div class="carousel-wrapper">
+    <div class="carousel-container">
+
+      <div class="carousel-card">
+        <img class="carousel-image" src="https://i.postimg.cc/K8M8bGDG/temp-Image0-YYh-LM.avif" alt="Módulo Clareza">
+        <div class="carousel-content">
+          <div class="carousel-label">C — Clareza</div>
+          <div class="carousel-title">Desbloqueio mental e emocional</div>
+          <ul class="carousel-points">
+
+          </ul>
+        </div>
+      </div>
+
+      <div class="carousel-card">
+        <img class="carousel-image" src="https://i.postimg.cc/pVcWnh0V/temp-Image6c-Ue-MY.avif" alt="Módulo Autenticidade">
+        <div class="carousel-content">
+          <div class="carousel-label">A — Autenticidade</div>
+          <div class="carousel-title">Presença forte e verdadeira</div>
+          <ul class="carousel-points">
+
+          </ul>
+        </div>
+      </div>
+
+      <div class="carousel-card">
+        <img class="carousel-image" src="https://i.postimg.cc/NFCjsLnM/temp-Image7tw9-Jf.avif" alt="Módulo Transcendência">
+        <div class="carousel-content">
+          <div class="carousel-label">T — Transcendência</div>
+          <div class="carousel-title">Rompa ciclos limitantes</div>
+          <ul class="carousel-points">
+
+          </ul>
+        </div>
+      </div>
+
+      <div class="carousel-card">
+        <img class="carousel-image" src="https://i.postimg.cc/mDbL7Qfk/temp-Image-G9-J9-YH.avif" alt="Módulo Intuição Estratégica">
+        <div class="carousel-content">
+          <div class="carousel-label">I — Intuição Estratégica</div>
+          <div class="carousel-title">Decisões com alma e visão</div>
+          <ul class="carousel-points">
+          </ul>
+        </div>
+      </div>
+
+      <div class="carousel-card">
+        <img class="carousel-image" src="https://i.postimg.cc/8zMN3yTs/temp-Image-GPixr-Y.avif" alt="Módulo Posicionamento">
+        <div class="carousel-content">
+          <div class="carousel-label">P — Posicionamento</div>
+          <div class="carousel-title">Com propósito e direção</div>
+          <ul class="carousel-points">
+          </ul>
+        </div>
+      </div>
+
+      <div class="carousel-card">
+        <img class="carousel-image" src="https://i.postimg.cc/WzzsHT4P/temp-Image-Jc-BZXB.avif" alt="Módulo Ação Intencional">
+        <div class="carousel-content">
+          <div class="carousel-label">A — Ação Intencional</div>
+          <div class="carousel-title">Execução sem sabotagem</div>
+          <ul class="carousel-points">
+          </ul>
+        </div>
+      </div>
+
+      <div class="carousel-card">
+        <img class="carousel-image" src="https://i.postimg.cc/gkr0Mqw6/temp-Imageyttj-EL.avif" alt="Módulo Vendas com Valor">
+        <div class="carousel-content">
+          <div class="carousel-label">G — Geração de Valor</div>
+          <div class="carousel-title">Venda com verdade</div>
+          <ul class="carousel-points">
+          </ul>
+        </div>
+      </div>
+
+      <div class="carousel-card">
+        <img class="carousel-image" src="https://i.postimg.cc/dt7qRsX2/temp-Image-Ko-FQZq.avif" alt="Módulo Expansão com Leveza">
+        <div class="carousel-content">
+          <div class="carousel-label">EL — Expansão com Leveza</div>
+          <div class="carousel-title">Cresça com equilíbrio</div>
+          <ul class="carousel-points">
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="depoimentos">
+        <div class="container">
+            <h2>Histórias de Transformação Real</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        "Antes do Método Transcenda eu estava perdida, sem direção. Hoje tenho clareza total do meu negócio
+                        e minhas vendas aumentaram 300% em 4 meses. A Cati me ensinou a vender com propósito."
+                    </p>
+                    <div class="testimonial-author">Marina Silva</div>
+                    <div class="testimonial-role">Consultora de Beleza</div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        "Eu achava que precisava de milhares de seguidores para vender. Com o método da Cati, descobri que
+                        qualidade supera quantidade. Faturei R$ 50mil no primeiro mês aplicando as estratégias."
+                    </p>
+                    <div class="testimonial-author">Ana Carolina</div>
+                    <div class="testimonial-role">Coach de Relacionamentos</div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        "O Método Transcenda não é só sobre vendas, é sobre transformação pessoal. Hoje me sinto uma
+                        empresária de verdade, não mais alguém que vive apagando incêndios."
+                    </p>
+                    <div class="testimonial-author">Juliana Mendes</div>
+                    <div class="testimonial-role">Terapeuta Holística</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offers Section -->
+    <section class="offers" id="ofertas">
+        <div class="container">
+            <h2>Escolha Sua Transformação</h2>
+            <div class="offers-grid">
+
+                <div class="offer-card">
+                    <div class="offer-title">Pack Iniciante</div>
+                    <div class="offer-subtitle">Método + comunidade</div>
+                    <div class="offer-price">R$ 897</div>
+                    <div class="offer-installments">ou 12x de R$ 89</div>
+                    <ul class="offer-features">
+                        <li>Conteúdo completo do Método Transcenda</li>
+                        <li>Acesso vitalício ao conteúdo</li>
+                        <li>Comunidade exclusiva de empreendedoras</li>
+                        <li>Templates e ferramentas práticas</li>
+                        <li>Clareza e estratégia para vender alto valor</li>
+                        <li>Perfeito para quem quer autonomia</li>
+                    </ul>
+                    <a href="https://api.whatsapp.com/send/?phone=5551996044678&text=Olá! Quero saber mais sobre o Método Transcenda completo" class="cta-button">QUERO O MÉTODO COMPLETO</a>
+                </div>
+                
+                <div class="offer-card">
+                    <div class="offer-title">Pack Intensivo</div>
+                    <div class="offer-subtitle">Transformação em 30 dias</div>
+                    <div class="offer-price">R$ 1.997</div>
+                    <div class="offer-installments">ou 12x de R$ 197</div>
+                    <ul class="offer-features">
+                        <li>Mentoria individual com análise estratégica completa</li>
+                        <li>Posicionamento de marca personalizado</li>
+                        <li>Estrutura de comunicação otimizada</li>
+                        <li>Preparação para escalar no digital</li>
+                        <li>Ideal para diagnóstico rápido e ações imediatas</li>
+                    </ul>
+                    <a href="https://api.whatsapp.com/send/?phone=5551996044678&text=Olá! Quero saber mais sobre o Pack Intensivo do Método Transcenda" class="cta-button">QUERO O PACK INTENSIVO</a>
+                </div>
+            
+                <div class="offer-card featured">
+                    <div class="offer-badge">PACK VIP ✨</div>
+                    <div class="offer-title">Mentoria Transcenda</div>
+                    <div class="offer-subtitle">Acompanhamento por 6 meses</div>
+                    <div class="offer-price">R$ 14.997</div>
+                    <div class="offer-installments">ou 12x de R$ 497</div>
+                    <ul class="offer-features">
+                        <li>6 meses de acompanhamento personalizado</li>
+                        <li>Transformação da operação em máquina de vendas</li>
+                        <li>Estratégias personalizadas mensais</li>
+                        <li>Metas claras e foco em resultados</li>
+                        <li>Suporte direto com a Cati</li>
+                        <li>Crescimento real com visão e direção</li>
+                    </ul>
+                    <a href="https://api.whatsapp.com/send/?phone=5551996044678&text=Olá! Quero saber mais sobre a Mentoria Transcenda de 6 meses" class="cta-button">QUERO A MENTORIA COMPLETA</a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Sua Nova História Começa Agora</h2>
+            <p>
+                "Você não nasceu para viver apagando incêndios — nasceu para acender luzes.
+                E o seu negócio pode (e deve) refletir isso."
+            </p>
+            <div class="scarcity-text">
+                ⏰ Últimas 48 horas com desconto especial!<br>
+                Apenas 10 vagas restantes para a próxima turma
+            </div>
+            <a href="https://api.whatsapp.com/send/?phone=5551996044678&text=Olá Cati! Quero transcender meu negócio com o Método Transcenda. Vamos conversar?" class="cta-button">
+                QUERO TRANSCENDER AGORA
+            </a>
+        </div>
+    </section>
+    
+    
+<section class="faq-section">
+  <div class="faq-title">✨ PERGUNTAS FREQUENTES</div>
+
+  <button class="accordion">1. Para quem é essa mentoria?</button>
+  <div class="panel">
+    <p>A mentoria é para mulheres empreendedoras e empresárias que sentem que estão travadas em algum ponto do seu negócio ou jornada pessoal e desejam transcender padrões limitantes, alinhar estratégia com essência e gerar resultados consistentes no digital — mesmo que ainda tenham poucos seguidores.</p>
+  </div>
+
+  <button class="accordion">2. Preciso ter um negócio já estruturado para participar?</button>
+  <div class="panel">
+    <p>Não. A mentoria atende tanto quem já tem um negócio em andamento quanto quem está em fase de construção. O foco é te ajudar a clarear sua visão, desbloquear o que te impede de crescer e te posicionar com força no digital.</p>
+  </div>
+
+  <button class="accordion">3. Quantos encontros são e como funciona?</button>
+  <div class="panel">
+    <p>A mentoria tem 8 encontros individuais, com acesso direto à mentora. Cada sessão segue uma linha estratégica baseada nos 8 pilares do Método CATIPAGEL, com acompanhamento próximo e personalizado.</p>
+  </div>
+
+  <button class="accordion">4. Qual é o formato dos encontros?</button>
+  <div class="panel">
+    <p>100% online, por videochamada. Você escolhe o melhor horário disponível na agenda e recebe materiais de apoio exclusivos para cada etapa.</p>
+  </div>
+
+  <button class="accordion">5. Recebo algum material ou suporte entre os encontros?</button>
+  <div class="panel">
+    <p>Sim. Você recebe fichas práticas, planner de acompanhamento, PDFs com os pilares, além de suporte direto para tirar dúvidas ao longo do processo.</p>
+  </div>
+
+  <button class="accordion">6. O que diferencia essa mentoria de outras no mercado?</button>
+  <div class="panel">
+    <p>O Método CATIPAGEL é único porque une transcendência pessoal + estratégia de posicionamento e vendas, de forma prática, profunda e humanizada. É uma jornada de transformação que trabalha você e o seu negócio como um todo — e não apenas fórmulas prontas.</p>
+  </div>
+
+  <button class="accordion">7. Quanto custa a mentoria?</button>
+  <div class="panel">
+    <p>O investimento é informado em conversa privada, pois existem condições especiais e bônus que podem variar conforme a fase do ciclo de lançamento. Mas o valor mínimo para divulgação é a partir de R$300 por entrega em formatos específicos.</p>
+  </div>
+
+  <button class="accordion">8. Essa mentoria realmente gera resultado?</button>
+  <div class="panel">
+    <p>Sim. Já ajudou diversas mulheres a destravarem inseguranças, aumentarem sua clareza e posicionamento, e começarem a vender com mais confiança e coerência com quem são. Os resultados vêm da ação combinada com direção certa.</p>
+  </div>
+
+  <button class="accordion">9. O que significa “Transcenda”?</button>
+  <div class="panel">
+    <p>Transcender é romper limites internos, sair do piloto automático e assumir a liderança consciente da sua jornada pessoal e profissional. É sobre ir além, com coragem, estratégia e alma.</p>
+  </div>
+
+  <button class="accordion">10. Como faço para me inscrever ou saber se é para mim?</button>
+  <div class="panel">
+    <p>Basta enviar uma mensagem direta ou preencher o formulário de interesse. A próxima etapa é uma conversa breve para entender sua fase atual e ver se a mentoria faz sentido para você agora.</p>
+  </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Cati Pagel - Método Transcenda. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Widget -->
+    <a href="https://api.whatsapp.com/send/?phone=5551996044678&text=Olá! Tenho interesse no Método Transcenda"
+       class="whatsapp-widget" target="_blank">
+        💬 Fale comigo
+    </a>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Countdown timer for urgency
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const end = now + 48 * 60 * 60 * 1000; // 48 hours from now
+
+            const timer = setInterval(() => {
+                const current = new Date().getTime();
+                const distance = end - current;
+
+                const hours = Math.floor(distance / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+                const badges = document.querySelectorAll('.urgency-badge, .scarcity-text');
+                badges.forEach(badge => {
+                    if (badge.classList.contains('scarcity-text')) {
+                        badge.innerHTML = `⏰ Restam apenas ${hours}h ${minutes}min com desconto especial!<br>Apenas 10 vagas restantes para a próxima turma`;
+                    }
+                });
+
+                if (distance < 0) {
+                    clearInterval(timer);
+                }
+            }, 60000); // Update every minute
+        }
+
+        updateCountdown();
+        
+    </script>
+    <script>
+const acc = document.getElementsByClassName("accordion");
+for (let i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function () {
+    this.classList.toggle("active");
+    const panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
+</html>
