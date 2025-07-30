@@ -110,28 +110,6 @@ body {
     transition: all 0.3s ease;
 }
 
-/* General Section Header */
-.section-header {
-    text-align: center;
-    margin-bottom: 80px;
-}
-
-.section-header h2 {
-    font-size: 48px;
-    font-weight: 700;
-    color: #0f172a;
-    margin-bottom: 16px;
-}
-
-.section-header p {
-    font-size: 20px;
-    color: #64748b;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
 /* Hero Section */
 .hero {
     padding: 150px 0 100px;
@@ -139,6 +117,7 @@ body {
     grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 80px;
+    /* max-width: 1200px; */
     margin: 0 auto;
     padding-left: 200px;
     padding-right: 150px;
@@ -182,7 +161,6 @@ body {
     transition: all 0.3s ease;
     display: inline-flex;
     align-items: center;
-    justify-content: center;
     cursor: pointer;
     border: none;
 }
@@ -205,7 +183,7 @@ body {
 }
 
 .btn-secondary:hover {
-    background: #e2e8f0;
+    background: #f1f5f9;
     transform: translateY(-1px);
 }
 
@@ -296,11 +274,27 @@ body {
     font-size: 14px;
 }
 
-
-/* --- Services Section (VERSÃO ATUALIZADA E CORRIGIDA) --- */
+/* Services Section */
 .services {
     padding: 100px 0;
     background: white;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.section-header h2 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 16px;
+}
+
+.section-header p {
+    font-size: 20px;
+    color: #64748b;
 }
 
 .services-grid {
@@ -315,30 +309,23 @@ body {
     border-radius: 20px;
     padding: 40px;
     position: relative;
-    display: flex;
-    flex-direction: column;
     transition: all 0.3s ease;
 }
 
 .service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
 .service-card.featured {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
     border: 2px solid #2563eb;
-    transform: scale(1.02);
-}
-
-.service-card.featured:hover {
-    transform: scale(1.02) translateY(-5px);
 }
 
 .service-badge {
     position: absolute;
-    top: -15px;
-    left: 50%;
-    transform: translateX(-50%);
+    top: -12px;
+    left: 40px;
     background: #2563eb;
     color: white;
     padding: 6px 16px;
@@ -348,8 +335,11 @@ body {
 }
 
 .service-icon {
-    font-size: 40px;
     margin-bottom: 24px;
+}
+
+.icon-platform, .icon-consulting {
+    font-size: 48px;
 }
 
 .service-card h3 {
@@ -361,33 +351,54 @@ body {
 
 .service-card p {
     color: #64748b;
-    margin-bottom: 24px;
+    margin-bottom: 32px;
     line-height: 1.6;
-    flex-grow: 1; /* Faz a descrição crescer e empurra o botão para baixo */
 }
 
-ul.service-features {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 32px 0;
+.service-features {
+    margin-bottom: 32px;
 }
 
-.service-features .feature {
+.feature {
     display: flex;
     align-items: center;
     gap: 12px;
     margin-bottom: 12px;
-    color: #475569;
 }
 
-.feature .feature-icon {
-    color: #10b981; /* Cor verde para o check, já definida no seu site */
+.feature-icon {
+    color: #10b981;
     font-weight: 700;
+}
+
+.service-price {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.price {
+    font-size: 36px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.period {
+    color: #64748b;
     font-size: 16px;
 }
 
-/* --- FIM DA SEÇÃO DE SERVIÇOS ATUALIZADA --- */
+.payment-options {
+    margin-bottom: 24px;
+}
 
+.payment-options p {
+    color: #2563eb;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
 
 /* Consultants Section */
 .consultants {
@@ -822,14 +833,6 @@ ul.service-features {
     .pricing-grid {
         grid-template-columns: 1fr;
     }
-    
-    .service-card.featured {
-        transform: scale(1);
-    }
-    
-    .service-card.featured:hover {
-        transform: translateY(-5px);
-    }
 
     .benefits-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -886,5 +889,112 @@ ul.service-features {
     .consultant-card,
     .pricing-card {
         padding: 24px;
+    }   
+
+    .feature-showcase {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 80px; /* EspaÃ§o vertical entre as duas seÃ§Ãµes */
+}
+
+/* Cada seÃ§Ã£o de feature (grid de 2 colunas) */
+.feature-section {
+    display: flex;
+    align-items: center;
+    gap: 50px; /* EspaÃ§o entre a coluna de texto e a visual */
+}
+
+/* Classe 'reverse' para alternar a ordem das colunas */
+.feature-section.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Coluna de texto e coluna visual */
+.text-content, .visual-content {
+    flex: 1; /* Faz com que cada coluna ocupe 50% do espaÃ§o */
+    min-width: 0; /* Previne problemas de overflow do flexbox */
+}
+
+/* Estilo para o placeholder visual */
+.placeholder-visual {
+    background-color: #f8f9fa; /* Um cinza bem claro */
+    border: 1px solid #e9ecef;
+    border-radius: 16px;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.placeholder-visual span {
+    font-size: 60px;
+    color: #ced4da; /* Cor sutil para o Ã­cone */
+}
+
+/* Estilos de conteÃºdo (reaproveitados e ajustados) */
+.text-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+}
+
+.text-content p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.service-features {
+    margin: 0;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.feature-icon {
+    color: #34C759;
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 12px;
+}
+
+.badge {
+    display: inline-block;
+    background-color: #e7f3ff;
+    color: #0056b3;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+
+/* --- Media Query para Responsividade --- */
+@media (max-width: 992px) {
+    .feature-section,
+    .feature-section.reverse {
+        flex-direction: column-reverse; /* Coloca o texto sempre abaixo do visual */
+        text-align: center; /* Centraliza o texto em telas menores */
     }
+
+    .text-content {
+      margin-top: 30px;
+    }
+
+    .text-content h3 {
+      font-size: 28px;
+    }
+
+    .feature {
+      justify-content: center; /* Centraliza os itens de feature */
+    }
+
 }
