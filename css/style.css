@@ -112,15 +112,15 @@ body {
 
 /* Hero Section */
 .hero {
-    padding: 120px 0 80px;
+    padding: 150px 0 100px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 80px;
-    max-width: 1200px;
+    /* max-width: 1200px; */
     margin: 0 auto;
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 200px;
+    padding-right: 150px;
     background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
 }
 
