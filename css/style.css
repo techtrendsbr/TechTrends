@@ -275,10 +275,12 @@ body {
 }
 
 /* --- VIDEO SECTION --- */
-/* Adicionando a seção de vídeo que criamos anteriormente */
+/* CORREÇÃO 1: Adicionado z-index e position para evitar sobreposição do Hero */
 .video-section {
     padding: 100px 24px;
     background-color: white;
+    position: relative; /* Garante que a seção crie seu próprio contexto de empilhamento */
+    z-index: 2; /* Coloca esta seção acima do Hero */
 }
 
 .browser-frame {
@@ -336,6 +338,8 @@ body {
 .services {
     padding: 100px 0;
     background: white;
+    position: relative; /* Adicionado também para consistência */
+    z-index: 1;
 }
 
 .section-header {
@@ -357,87 +361,18 @@ body {
 
 .services-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-}
-
-.service-card {
-    background: white;
-    border: 1px solid #e2e8f0;
-    border-radius: 20px;
-    padding: 40px;
-    position: relative;
-    transition: all 0.3s ease;
-}
-
-.service-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-}
-
-.service-card.featured {
-    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-    border: 2px solid #2563eb;
-}
-
-.service-badge {
-    position: absolute;
-    top: -12px;
-    left: 40px;
-    background: #2563eb;
-    color: white;
-    padding: 6px 16px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 600;
-}
-
-.service-icon {
-    margin-bottom: 24px;
-}
-
-.icon-platform, .icon-consulting {
-    font-size: 48px;
-}
-
-.service-card h3 {
-    font-size: 28px;
-    font-weight: 700;
-    color: #0f172a;
-    margin-bottom: 16px;
-}
-
-.service-card p {
-    color: #64748b;
-    margin-bottom: 32px;
-    line-height: 1.6;
-}
-
-.service-features {
-    margin-bottom: 32px;
-}
-
-.feature {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 12px;
-}
-
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* Ajustado para 3 colunas como no seu HTML */
     gap: 40px 30px;
 }
 
-/* Cada item individual */
-.feature-item {
+/* Estilos para os itens dentro de .services-grid (anteriormente .feature-item) */
+.services-grid .feature-item {
     display: flex;
     align-items: flex-start;
     gap: 20px;
 }
 
-    .feature-icon {
+.services-grid .feature-icon {
     width: 52px;
     height: 52px;
     border-radius: 12px;
@@ -445,52 +380,37 @@ body {
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    color: white; /* Define a cor do SVG para branco */
-    }
+    color: white; 
+}
     
-    .feature-icon svg {
+.services-grid .feature-icon svg {
     width: 28px;
     height: 28px;
-    }
-
-    .icon-purple { background-color: #9F7AEA; }
-    .icon-blue { background-color: #4299E1; }
-    .icon-yellow { background-color: #F6E05E; }
-    .icon-cyan { background-color: #38B2AC; }
-    .icon-pink { background-color: #ED64A6; }
-    .icon-green { background-color: #48BB78; }
-    .icon-orange { background-color: #F56565; }
-    .icon-red { background-color: #ED8936; }
-    .icon-indigo { background-color: #667EEA; }
-
-.service-price {
-    display: flex;
-    align-items: baseline;
-    gap: 8px;
-    margin-bottom: 24px;
 }
 
-.price {
-    font-size: 36px;
+.services-grid .feature-text h3 {
+    font-size: 18px;
     font-weight: 700;
     color: #0f172a;
+    margin: 0 0 8px 0;
 }
 
-.period {
+.services-grid .feature-text p {
+    font-size: 15px;
     color: #64748b;
-    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
 }
 
-.payment-options {
-    margin-bottom: 24px;
-}
+.icon-purple { background-color: #9F7AEA; }
+.icon-blue { background-color: #4299E1; }
+.icon-yellow { background-color: #F6E05E; }
+.icon-cyan { background-color: #38B2AC; }
+.icon-pink { background-color: #ED64A6; }
+.icon-green { background-color: #48BB78; }
+.icon-indigo { background-color: #667EEA; }
 
-.payment-options p {
-    color: #2563eb;
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 4px;
-}
+
 
 /* Consultants Section */
 .consultants {
@@ -501,7 +421,7 @@ body {
 .consultants-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    gap: 40px; /* Reduzido o gap para melhor encaixe */
     margin-bottom: 80px;
 }
 
@@ -526,17 +446,17 @@ body {
 
 
 .consultant-image {
-    width: 100%;
-    height: 220px;
-    border-radius: 10%;
+    width: 150px; /* Largura fixa para a imagem */
+    height: 210px; /* Altura fixa para manter proporção */
+    border-radius: 10%; /* Deixa a foto redonda */
     overflow: hidden;
-    margin-bottom: 10px;
+    flex-shrink: 0; /* Impede que a imagem seja espremida */
 }
 
 .consultant-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Garante que a imagem preencha o círculo sem distorcer */
 }
 
 .consultant-info h3 {
@@ -550,66 +470,39 @@ body {
     color: #2563eb;
     font-weight: 600;
     margin-bottom: 16px;
+    display: block; /* Garante que ocupe a linha inteira */
 }
 
 .consultant-description {
     color: #64748b;
     line-height: 1.6;
-    margin-bottom: 24px;
-}
-
-.consultant-stats {
-    display: flex;
-    gap: 32px;
-}
-
-.stat {
-    text-align: center;
-}
-
-.stat-number {
-    display: block;
-    font-size: 20px;
-    font-weight: 700;
-    color: #0f172a;
-}
-
-.stat-label {
-    font-size: 12px;
-    color: #64748b;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    margin-bottom: 0; /* Removido margin-bottom para alinhar melhor */
 }
 
 .instagram-cta {
-    text-align: left;
     background: linear-gradient(135deg, #2563eb, #7c3aed);
     border-radius: 20px;
-    padding: 40px 40px;
+    padding: 40px;
     color: white;
 }
 
 .instagram-container {
-            /* O container colorido com gradiente */
-            background: linear-gradient(135deg, #2563eb, #7c3aed);
-            border-radius: 20px;
-            color: white;
-            display: flex;
-            justify-content: space-between; /* Coloca espaço entre os itens */
-            align-items: center; /* Alinha verticalmente no centro */
-            gap: 30px; /* Espaço entre o texto e o botão */
-        }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
 
 .instagram-info h3 {
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 700;
     margin-bottom: 10px;
 }
 
 .instagram-info p {
-    font-size: 18px;
+    font-size: 16px;
     opacity: 0.9;
-    margin-bottom: 5px;
+    margin: 0;
 }
 
 .instagram-btn {
@@ -618,12 +511,13 @@ body {
     gap: 12px;
     background: white;
     color: #2563eb;
-    padding: 16px 32px;
+    padding: 14px 28px;
     border-radius: 12px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 16px;
     transition: all 0.3s ease;
+    white-space: nowrap;
 }
 
 .instagram-btn:hover {
@@ -647,12 +541,12 @@ body {
 .benefits-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
+    gap: 20px; /* Reduzido o gap */
 }
 
 .benefit-item {
     text-align: center;
-    padding: 40px 24px;
+    padding: 30px 15px; /* Ajustado o padding */
 }
 
 .benefit-icon {
@@ -693,6 +587,8 @@ body {
     padding: 40px;
     position: relative;
     transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 .pricing-card:hover {
@@ -701,7 +597,6 @@ body {
 }
 
 .pricing-card.featured {
-    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
     border: 2px solid #2563eb;
 }
 
@@ -756,23 +651,27 @@ body {
 .price-description {
     color: #64748b;
     font-size: 16px;
+    flex-grow: 1;
 }
 
 .pricing-features {
     margin-bottom: 32px;
+    flex-grow: 1;
 }
 
 .pricing-features .feature {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 12px;
     margin-bottom: 16px;
+    text-align: left;
 }
 
 .feature-check {
     color: #10b981;
     font-weight: 700;
     font-size: 16px;
+    margin-top: 4px;
 }
 
 .pricing-btn {
@@ -786,6 +685,7 @@ body {
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
+    text-decoration: none;
 }
 
 .pricing-btn:hover {
@@ -805,7 +705,7 @@ body {
 }
 
 .payment-options {
-    margin-bottom: 24px;
+    margin: 16px 0;
     text-align: center;
 }
 
@@ -885,6 +785,7 @@ body {
 
 .footer-section ul {
     list-style: none;
+    padding: 0;
 }
 
 .footer-section ul li {
@@ -909,6 +810,23 @@ body {
 }
 
 /* Responsive Design */
+@media (max-width: 992px) {
+    .consultants-grid {
+        gap: 20px;
+    }
+    .consultant-item {
+        gap: 15px;
+    }
+    .consultant-image {
+        width: 120px;
+        height: 120px;
+    }
+    .consultant-info h3 {
+        font-size: 20px;
+    }
+}
+
+
 @media (max-width: 768px) {
     .nav-links {
         display: none;
@@ -944,6 +862,20 @@ body {
         grid-template-columns: 1fr;
     }
 
+    /* CORREÇÃO 2: Layout dos consultores em telas menores */
+    .consultant-item {
+        flex-direction: column; /* Empilha a foto sobre o texto */
+        align-items: center; /* Centraliza os itens */
+        text-align: center;
+    }
+    
+    .consultant-image {
+        width: 150px; /* Tamanho fixo e maior */
+        height: 150px;
+        margin-bottom: 20px; /* Espaço entre a foto e o texto */
+    }
+
+
     .benefits-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 24px;
@@ -961,6 +893,11 @@ body {
         flex-direction: column;
         align-items: center;
     }
+    
+    .instagram-container {
+        flex-direction: column;
+        text-align: center;
+    }
 
     .footer-content {
         grid-template-columns: 1fr;
@@ -971,5 +908,11 @@ body {
         width: 300px;
         transform: none;
     }
-}
     
+}
+
+@media (max-width: 480px) {
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+}
