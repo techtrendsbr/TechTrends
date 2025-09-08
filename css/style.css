@@ -193,10 +193,15 @@ body {
 }
 
 /* Hero Visual */
+/* Estilos para o container principal hero-visual, se já não tiver */
 .hero-visual {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative; /* Essencial para posicionar as fotos */
+    display: flex; /* Para centralizar o mockup */
+    justify-content: center; /* Centraliza o mockup */
+    align-items: center; /* Centraliza o mockup verticalmente */
+    height: 600px; /* Altura do hero-visual, ajuste conforme o design */
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .mockup-container {
@@ -330,6 +335,68 @@ body {
     color: #64748b;
     max-width: 700px;
     margin: 0 auto;
+}
+
+
+/* Estilos para as fotos dos consultores */
+.consultant-photo {
+    position: absolute; /* Permite posicionamento livre */
+    width: 160px; /* Tamanho das fotos, ajuste se necessário */
+    height: 160px; /* Garante que a foto seja um círculo */
+    border-radius: 50%; /* Formato redondo */
+    object-fit: cover; /* Garante que a imagem preencha o círculo sem distorcer */
+    border: 4px solid rgba(255, 255, 255, 0.8); /* Borda branca suave */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+    z-index: 2; /* Garante que as fotos fiquem acima do mockup */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.consultant-photo:hover {
+    transform: scale(1.05) rotate(2deg); /* Efeito ao passar o mouse */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Posicionamento da foto superior esquerda */
+.consultant-photo.top-left {
+    top: 5%; /* Distância do topo */
+    left: 5%; /* Distância da esquerda */
+}
+
+/* Posicionamento da foto inferior direita */
+.consultant-photo.bottom-right {
+    bottom: 5%; /* Distância da base */
+    right: 5%; /* Distância da direita */
+}
+
+
+/* --- Responsive Design (Ajustes para telas menores) --- */
+@media (max-width: 992px) {
+    .consultant-photo {
+        width: 120px; /* Reduz o tamanho das fotos em tablets */
+        height: 120px;
+        top: 3%; /* Ajusta o top */
+        left: 3%; /* Ajusta o left */
+    }
+    .consultant-photo.bottom-right {
+        bottom: 3%; /* Ajusta o bottom */
+        right: 3%; /* Ajusta o right */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-visual {
+        height: 450px; /* Reduz a altura do hero-visual em celulares */
+    }
+    .consultant-photo {
+        width: 90px; /* Reduz ainda mais o tamanho das fotos em celulares */
+        height: 90px;
+        top: 2%; /* Ajusta o top */
+        left: 2%; /* Ajusta o left */
+    }
+    .consultant-photo.bottom-right {
+        bottom: 2%; /* Ajusta o bottom */
+        right: 2%; /* Ajusta o right */
+    }
 }
 
 
