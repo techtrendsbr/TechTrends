@@ -754,7 +754,7 @@ body {
     overflow: hidden; /* Essencial para que o border-radius funcione corretamente no vídeo */
     
     /* Define a proporção de 4:3 para o vídeo */
-    aspect-ratio: 4 / 3; 
+    aspect-ratio: 1 / 1; 
 
     border-top-left-radius: 16px; /* Arredonda as bordas superiores do container */
     border-top-right-radius: 16px;
