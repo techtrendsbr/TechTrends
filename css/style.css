@@ -117,7 +117,6 @@ body {
     grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 80px;
-    /* max-width: 1200px; */
     margin: 0 auto;
     padding-left: 200px;
     padding-right: 150px;
@@ -193,13 +192,12 @@ body {
 }
 
 /* Hero Visual */
-/* Estilos para o container principal hero-visual, se já não tiver */
 .hero-visual {
-    position: relative; /* Essencial para posicionar as fotos */
-    display: flex; /* Para centralizar o mockup */
-    justify-content: center; /* Centraliza o mockup */
-    align-items: center; /* Centraliza o mockup verticalmente */
-    height: 600px; /* Altura do hero-visual, ajuste conforme o design */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
     padding: 20px;
     box-sizing: border-box;
 }
@@ -216,6 +214,7 @@ body {
     width: 400px;
     transform: rotateY(-10deg) rotateX(5deg);
     transition: transform 0.3s ease;
+    z-index: 1;
 }
 
 .dashboard-mockup:hover {
@@ -295,7 +294,6 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: -50px;
-
 }
 
 .logos-container {
@@ -337,152 +335,92 @@ body {
     margin: 0 auto;
 }
 
-
-/* Estilos para as fotos dos consultores */
+/* Consultant Photos Styles */
 .consultant-photo {
-    position: absolute; /* Permite posicionamento livre */
-    width: 160px; /* Tamanho das fotos, ajuste se necessário */
-    height: 160px; /* Garante que a foto seja um círculo */
-    border-radius: 50%; /* Formato redondo */
-    object-fit: cover; /* Garante que a imagem preencha o círculo sem distorcer */
-    border: 4px solid rgba(255, 255, 255, 0.8); /* Borda branca suave */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
-    z-index: 2; /* Garante que as fotos fiquem acima do mockup */
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    z-index: 2;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .consultant-photo:hover {
-    transform: scale(1.05) rotate(2deg); /* Efeito ao passar o mouse */
+    transform: scale(1.05) rotate(2deg);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
 }
 
-/* Posicionamento da foto superior esquerda */
 .consultant-photo.top-left {
-    top: 5%; /* Distância do topo */
-    left: 5%; /* Distância da esquerda */
+    top: 5%;
+    left: 5%;
 }
 
-/* Posicionamento da foto inferior direita */
 .consultant-photo.bottom-right {
-    bottom: 5%; /* Distância da base */
-    right: 5%; /* Distância da direita */
+    bottom: 5%;
+    right: 5%;
 }
 
-
-/* --- Responsive Design (Ajustes para telas menores) --- */
-@media (max-width: 992px) {
-    .consultant-photo {
-        width: 120px; /* Reduz o tamanho das fotos em tablets */
-        height: 120px;
-        top: 3%; /* Ajusta o top */
-        left: 3%; /* Ajusta o left */
-    }
-    .consultant-photo.bottom-right {
-        bottom: 3%; /* Ajusta o bottom */
-        right: 3%; /* Ajusta o right */
-    }
-}
-
-@media (max-width: 768px) {
-    .hero-visual {
-        height: 450px; /* Reduz a altura do hero-visual em celulares */
-    }
-    .consultant-photo {
-        width: 90px; /* Reduz ainda mais o tamanho das fotos em celulares */
-        height: 90px;
-        top: 2%; /* Ajusta o top */
-        left: 2%; /* Ajusta o left */
-    }
-    .consultant-photo.bottom-right {
-        bottom: 2%; /* Ajusta o bottom */
-        right: 2%; /* Ajusta o right */
-    }
-}
-
-
-/* --- NOVA SEÇÃO: PAIN POINTS --- */
+/* Pain Points Section */
 .pain-points {
     padding: 100px 0;
     background-color: #f8fafc;
 }
 .pain-points-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* ALTERADO: 4 colunas */
-    gap: 25px; /* Levemente ajustado para o novo layout */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
 }
 .pain-point-card {
     background: white;
     border-radius: 16px;
-    padding: 30px 25px; /* Padding ajustado */
+    padding: 30px 25px;
     text-align: center;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
-    display: flex; /* Adicionado para melhor alinhamento interno */
-    flex-direction: column; /* Adicionado para melhor alinhamento interno */
+    display: flex;
+    flex-direction: column;
 }
 .pain-point-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
 }
-
 .pain-point-card.red { border: 2px solid red; }
 .pain-point-card.orange { border: 2px solid orange; }
 .pain-point-card.grey { border: 2px solid grey; }
-
-
 .pain-point-badge { position: absolute; top: -12px; left: 40px; background: #2563eb; color: white; padding: 6px 16px; border-radius: 20px; font-size: 14px; font-weight: 600; }
-
-
 .pain-point-icon {
-    font-size: 36px; /* Tamanho do ícone ajustado */
+    font-size: 36px;
     margin-bottom: 20px;
 }
 .pain-point-card h3 {
-    font-size: 20px; /* Tamanho do título ajustado */
+    font-size: 20px;
     color: #1e293b;
     margin-bottom: 12px;
 }
 .pain-point-card p {
     color: #475569;
-    font-size: 15px; /* Tamanho do texto ajustado */
-    flex-grow: 1; /* Garante que os cards tenham a mesma altura */
+    font-size: 15px;
+    flex-grow: 1;
 }
 
-/* --- RESPONSIVIDADE (JÁ INCLUÍDA NO BLOCO PRINCIPAL) --- */
-@media (max-width: 992px) {
-    .pain-points-grid {
-        grid-template-columns: repeat(2, 1fr); /* Volta para 2 colunas em tablets */
-    }
-}
-@media (max-width: 768px) {
-    .pain-points-grid {
-        grid-template-columns: 1fr; /* Volta para 1 coluna em celulares */
-    }
-}
-
-/* Container principal para alinhar as "pílulas" horizontalmente */
 .pill-legend-container {
     display: flex;
     justify-content: center;
-    gap: 15px; /* Espaço entre as pílulas */
-    padding: 20px; /* Adicionado padding lateral para respiro em telas pequenas */
+    gap: 15px;
+    padding: 20px;
     width: 100%;
     margin-top: 22px;
-    box-sizing: border-box; /* Garante que o padding não aumente a largura total */
-
-    /* Adiciona rolagem horizontal se os itens não couberem na tela */
+    box-sizing: border-box;
     overflow-x: auto; 
-    
-    /* Remove a barra de rolagem visualmente, mas mantém a funcionalidade (opcional) */
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 .pill-legend-container::-webkit-scrollbar {
-    display: none; /* Chrome, Safari and Opera */
+    display: none;
 }
-
-
-/* Estilo para cada "pílula" individual */
 .pill-legend-item {
     display: flex;
     align-items: center;
@@ -493,18 +431,12 @@ body {
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     transition: all 0.2s ease-in-out;
     cursor: default;
-
-    /* Adicionado para garantir que os itens não encolham */
     flex-shrink: 0; 
 }
-
-/* Efeito sutil ao passar o mouse */
 .pill-legend-item:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
 }
-
-/* Estilo para o ponto colorido DENTRO da pílula */
 .pill-legend-item .legend-dot {
     width: 8px;
     height: 8px;
@@ -512,73 +444,25 @@ body {
     margin-right: 12px;
     flex-shrink: 0;
 }
-
-/* Estilo para o texto DENTRO da pílula */
 .pill-legend-item .legend-text {
     font-size: 0.75rem;
     font-weight: 500;
     color: #374151;
     white-space: nowrap;
 }
-
-/* Cores dos pontos */
 .legend-dot.color-red    { background-color: #ef4444; }
 .legend-dot.color-orange { background-color: #f97316; }
 .legend-dot.color-gray   { background-color: #64748b; }
 
-
 /* Client Stories Slider Section */
-.client-stories {
-    padding: 100px 0;
-    background: white;
-}
-.slider-viewport {
-    width: 100%;
-    margin-bottom: 40px;
-}
-.slider-wrapper {
-    display: flex;
-    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
-}
-.slide {
-    flex: 0 0 50%;
-    padding: 0 15px;
-    box-sizing: border-box;
-}
-.story-card {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    gap: 20px;
-    background: white;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
-    height: 100%;
-}
-.story-image {
-    flex-shrink: 0;
-    width: 100%;
-    height: 180px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f0f4f8;
-    border-radius: 12px;
-    font-size: 40px;
-    color: #94a3b8;
-    overflow: hidden;
-}
-.story-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.story-content {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
+.client-stories { padding: 100px 0; background: white; }
+.slider-viewport { width: 100%; margin-bottom: 40px; }
+.slider-wrapper { display: flex; transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); }
+.slide { flex: 0 0 50%; padding: 0 15px; box-sizing: border-box; }
+.story-card { display: flex; flex-direction: column; text-align: left; gap: 20px; background: white; padding: 30px; border-radius: 20px; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06); height: 100%; }
+.story-image { flex-shrink: 0; width: 100%; height: 180px; display: flex; align-items: center; justify-content: center; background-color: #f0f4f8; border-radius: 12px; font-size: 40px; color: #94a3b8; overflow: hidden; }
+.story-image img { width: 100%; height: 100%; object-fit: cover; }
+.story-content { display: flex; flex-direction: column; flex-grow: 1; }
 .story-content .story-title { font-size: 22px; font-weight: 700; color: #0f172a; margin-bottom: 10px; }
 .story-content .story-date { display: block; font-size: 14px; color: #64748b; margin-bottom: 8px; order: -1; }
 .story-content .story-description { font-size: 16px; color: #475569; line-height: 1.6; margin-bottom: 20px; flex-grow: 1; }
@@ -602,12 +486,7 @@ body {
 .modal-description { font-size: 17px; line-height: 1.7; color: #334155; }
 
 /* Video Section */
-.video-section {
-    padding: 80px 24px;
-    background-color: white;
-    position: relative;
-    z-index: 2;
-}
+.video-section { padding: 80px 24px; background-color: white; position: relative; z-index: 2; }
 .browser-frame { max-width: 900px; margin: 0 auto; border: 1px solid #e2e8f0; background-color: #fff; border-radius: 12px; box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.15); overflow: hidden; }
 .frame-header { padding: 12px; background-color: #edf2f7; display: flex; align-items: center; border-bottom: 1px solid #e2e8f0; }
 .dots { display: flex; gap: 8px; }
@@ -644,141 +523,80 @@ body {
 .instagram-btn { display: inline-flex; align-items: center; gap: 12px; background: white; color: #2563eb; padding: 14px 28px; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 16px; transition: all 0.3s ease; white-space: nowrap; }
 .instagram-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); }
 
-/* --- NOVA SEÇÃO: CARROSSEL DE PALESTRAS --- */
-.keynote-carousel {
-    padding: 100px 0;
-    background: #f8fafc; /* Mesma cor da seção de consultores */
-}
-
-.keynote-slider-viewport {
-    width: 100%;
-    overflow: hidden; /* Essencial para o carrossel funcionar */
-    margin-bottom: 40px;
-}
-
-.keynote-slider-wrapper {
-    display: flex;
-    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
-}
-
-.keynote-slide {
-    flex: 0 0 25%; /* 4 slides visíveis em telas grandes */
-    padding: 0 15px;
-    box-sizing: border-box;
-}
-
-.keynote-slide figure {
-    margin: 0;
-    position: relative;
-}
-
-.keynote-slide img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 4 / 3; /* Proporção da imagem */
-    object-fit: cover;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-}
-
-.keynote-slide img:hover {
-    transform: scale(1.03);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-}
-
-.keynote-slide figcaption {
-    text-align: center;
-    font-weight: 500;
-    color: #475569;
-    margin-top: 15px;
-    font-size: 15px;
-}
-
-/* Reutilizando estilos de navegação do carrossel anterior */
-.keynote-slider-navigation {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 24px;
-}
-.keynote-slider-arrow {
-    background: white; border: 1px solid #e2e8f0; border-radius: 50%; width: 44px; height: 44px; font-size: 20px; font-weight: 600; color: #334155; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); display: flex; align-items: center; justify-content: center;
-}
-.keynote-slider-arrow:hover {
-    background-color: #2563eb; color: white; border-color: #2563eb; transform: scale(1.05);
-}
-.keynote-slider-arrow:disabled {
-    opacity: 0.4; cursor: not-allowed; transform: scale(1); background-color: #f8fafc;
-}
-.keynote-slider-dots {
-    display: flex; align-items: center; gap: 8px;
-}
-.keynote-slider-dot {
-    width: 9px; height: 9px; background: #cbd5e1; border-radius: 50%; cursor: pointer; transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-}
-.keynote-slider-dot.active {
-    width: 28px; background: #2563eb; border-radius: 10px;
-}
+/* Keynote Carousel Section */
+.keynote-carousel { padding: 100px 0; background: #f8fafc; }
+.keynote-slider-viewport { width: 100%; overflow: hidden; margin-bottom: 40px; }
+.keynote-slider-wrapper { display: flex; transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); }
+.keynote-slide { flex: 0 0 25%; padding: 0 15px; box-sizing: border-box; }
+.keynote-slide figure { margin: 0; position: relative; }
+.keynote-slide img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 16px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); transition: all 0.3s ease; }
+.keynote-slide img:hover { transform: scale(1.03); box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); }
+.keynote-slide figcaption { text-align: center; font-weight: 500; color: #475569; margin-top: 15px; font-size: 15px; }
+.keynote-slider-navigation { display: flex; justify-content: center; align-items: center; gap: 24px; }
+.keynote-slider-arrow { background: white; border: 1px solid #e2e8f0; border-radius: 50%; width: 44px; height: 44px; font-size: 20px; font-weight: 600; color: #334155; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); display: flex; align-items: center; justify-content: center; }
+.keynote-slider-arrow:hover { background-color: #2563eb; color: white; border-color: #2563eb; transform: scale(1.05); }
+.keynote-slider-arrow:disabled { opacity: 0.4; cursor: not-allowed; transform: scale(1); background-color: #f8fafc; }
+.keynote-slider-dots { display: flex; align-items: center; gap: 8px; }
+.keynote-slider-dot { width: 9px; height: 9px; background: #cbd5e1; border-radius: 50%; cursor: pointer; transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1); }
+.keynote-slider-dot.active { width: 28px; background: #2563eb; border-radius: 10px; }
 
 /* Pricing Section */
 .pricing { padding: 100px 0; background: #f8fafc; }
 .pricing-grid { display: flex; justify-content: center; gap: 40px; max-width: 900px; margin: 0 auto; }
-.pricing-card { background: white; border: 1px solid #e2e8f0; border-radius: 20px; padding: 40px; position: relative; transition: all 0.3s ease; display: flex; flex-direction: column; max-width: 420px; }
+.pricing-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 40px;
+    position: relative;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    max-width: 420px;
+    padding-top: 60px;
+}
 .pricing-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); }
 .pricing-card.featured { border: 2px solid #2563eb; }
-.pricing-badge { position: absolute; top: -12px; left: 40px; background: #2563eb; color: white; padding: 6px 16px; border-radius: 20px; font-size: 14px; font-weight: 600; }
+.pill-badge-video {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #2563eb;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+}
 .pricing-header { text-align: center; margin-bottom: 40px; }
 .pricing-header h3 { font-size: 24px; font-weight: 700; color: #0f172a; margin-bottom: 16px; }
 .price { display: flex; align-items: baseline; justify-content: center; gap: 4px; margin-bottom: 12px; }
 .currency { font-size: 20px; color: #64748b; }
 .amount { font-size: 48px; font-weight: 700; color: #0f172a; }
 .period { font-size: 16px; color: #64748b; }
+.pricing-badge { position: absolute; top: -12px; left: 40px; background: #2563eb; color: white; padding: 6px 16px; border-radius: 20px; font-size: 14px; font-weight: 600; }
 .price-description { color: #64748b; font-size: 16px; flex-grow: 1; }
 .pricing-features { margin-bottom: 32px; flex-grow: 1; }
 .pricing-features .feature { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px; text-align: left; }
 .feature-check { color: #10b981; font-weight: 700; font-size: 16px; margin-top: 4px; }
 .pricing-btn { width: 100%; padding: 16px 24px; border-radius: 12px; text-decoration: none; border: none; background: green; color: white; font-size: 18px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; text-align: center; }
 .pricing-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3); }
-
-
-/* style.css */
-
-/* ... seu código anterior ... */
-
-/* Estilos para o container do vídeo dentro do card de pricing */
 .pricing-card .video-container {
-    width: calc(100% + 40px); /* Ajusta para preencher o card, considerando o padding do .pricing-card */
-    margin: 0px -20px 20px -20px; /* Margens negativas para estender até as bordas internas do card */
+    width: calc(100% + 80px);
+    margin: -60px -40px 20px -40px;
     position: relative;
-    overflow: hidden; /* Essencial para que o border-radius funcione corretamente no vídeo */
-    
-    /* Define a proporção de 4:3 para o vídeo */
-    aspect-ratio: 1 / 1; 
-
-    border-top-left-radius: 16px; /* Arredonda as bordas superiores do container */
-    border-top-right-radius: 16px;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
 }
+.pricing-card .pricing-video { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-/* Estilos para o elemento <video> em si */
-.pricing-card .pricing-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Garante que o vídeo cubra todo o espaço sem distorção, cortando se necessário */
-    display: block; /* Remove qualquer espaço extra abaixo do vídeo */
-}
-
-/* ... o restante do seu CSS ... */
-
-/* Ajustes de responsividade para o vídeo, se o padding do card mudar */
-@media (max-width: 768px) {
-    .pricing-card .video-container {
-        width: calc(100% + 30px); /* Exemplo: se o padding do card for 15px em telas pequenas */
-        margin: -15px -15px 15px -15px; /* Ajusta as margens negativas */
-    }
-}
-
-/* --- NOVA SEÇÃO: FAQ --- */
+/* FAQ Section */
 .faq-section { padding: 100px 0; background-color: white; }
 .faq-container { max-width: 800px; margin: 0 auto; }
 .faq-item { border-bottom: 1px solid #e2e8f0; }
@@ -812,20 +630,66 @@ body {
 
 /* Responsive Design */
 @media (max-width: 992px) {
+    .consultant-photo { width: 120px; height: 120px; top: 3%; left: 3%; }
+    .consultant-photo.bottom-right { bottom: 3%; right: 3%; }
     .consultants-grid { gap: 20px; }
     .consultant-item { gap: 15px; }
     .consultant-image { width: 120px; height: 120px; }
     .consultant-info h3 { font-size: 20px; }
-    .pain-points-grid { grid-template-columns: 1fr; }
+    .pain-points-grid { grid-template-columns: repeat(2, 1fr); }
     .slide { flex: 0 0 100%; }
 }
+
 @media (max-width: 768px) {
     .nav-links { display: none; }
     .mobile-menu-toggle { display: flex; }
-    .hero { grid-template-columns: 1fr; gap: 40px; text-align: center; padding: 100px 24px 60px; }
+    
+    .hero { 
+        padding: 120px 24px 60px;
+        grid-template-columns: 1fr; 
+        gap: 20px; 
+        text-align: center; 
+    }
+
     .hero-content h1 { font-size: 36px; }
     .hero-subtitle { font-size: 18px; }
     .hero-cta { flex-direction: column; align-items: center; }
+    
+    .hero-visual {
+        position: relative;
+        height: auto;
+        padding: 45px 0;
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .dashboard-mockup {
+        width: 100%;
+        max-width: 320px;
+        transform: none;
+        z-index: 1;
+    }
+    .consultant-photo {
+        width: 90px;
+        height: 90px;
+        z-index: 2;
+    }
+    .consultant-photo.top-left {
+        top: 0;
+        left: 0;
+        transform: translate(15%, 15%);
+        bottom: auto;
+        right: auto;
+    }
+    .consultant-photo.bottom-right {
+        bottom: 0;
+        right: 0;
+        transform: translate(-15%, -15%);
+        top: auto;
+        left: auto;
+    }
+    
     .logos-container img { max-height: 28px; }
     .services-grid, .consultants-grid, .pricing-grid { grid-template-columns: 1fr; }
     .consultant-item { flex-direction: column; align-items: center; text-align: center; }
@@ -833,6 +697,12 @@ body {
     .section-header h2, .cta-content h2 { font-size: 32px; }
     .cta-buttons, .instagram-container { flex-direction: column; align-items: center; }
     .instagram-container { text-align: center; }
-    .footer-content { grid-template-columns: 1fr; gap: 40px; }
-    .dashboard-mockup { width: 300px; transform: none; }
+    .footer-content { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+    .pain-points-grid { grid-template-columns: 1fr; }
+    .pricing-card .video-container { width: calc(100% + 40px); margin: -20px -20px 20px -20px; }
+
+    /* CORREÇÃO: Esconde o footer em telas de celular */
+    .footer {
+        display: none;
+    }
 }
